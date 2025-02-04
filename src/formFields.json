@@ -1,0 +1,35 @@
+// Personal Info
+"yourName",
+"yourStreetAddress",
+"yourCity", 
+"yourState",
+"yourZipCode",
+"yourEmail",
+"yourPhoneNumber",
+
+// Client Info  
+"hiringPartyName",
+"hiringPartyContactName",
+"hiringPartyStreetAddress",
+"hiringPartyCity",
+"hiringPartyState", 
+"hiringPartyZipCode",
+
+// Case Details
+"startDate",
+"conclusionDate", 
+"servicesPerformed", // Array
+"agreedAmount",
+"balanceDue",
+"paymentDueDate",
+"daysOverdue",
+"paymentInstructions",
+
+// Optional Fields
+"additionalTerms",
+"contractExists",
+"contractDate",
+"contractDocumentName", 
+"invoiceNumber",
+"emailThreadReference",
+"ccRecipient"

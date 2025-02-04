@@ -1,0 +1,30 @@
+export interface FormData {
+  yourName: string;
+  yourStreetAddress: string;
+  yourCity: string;
+  yourState: string;
+  yourZipCode: string;
+  yourEmail: string;
+  yourPhoneNumber: string;
+  hiringPartyName: string;
+  hiringPartyContactName: string;
+  hiringPartyStreetAddress: string;
+  hiringPartyCity: string;
+  hiringPartyState: string;
+  hiringPartyZipCode: string;
+  startDate: Date;
+  conclusionDate: Date;
+  servicesPerformed: string[];
+  agreedAmount: number;
+  balanceDue: number;
+  paymentDueDate: Date;
+  daysOverdue: number;
+  paymentInstructions: string;
+  additionalTerms?: string;
+  contractExists: boolean;
+  contractDate?: Date;
+  contractDocumentName?: string;
+  invoiceNumber?: string;
+  emailThreadReference?: string;
+  ccRecipient?: string;
+}

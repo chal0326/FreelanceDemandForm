@@ -1,0 +1,74 @@
+{{! FREELANCE ISN'T FREE ACT DEMAND LETTER TEMPLATE }}
+{{yourName}}
+{{yourStreetAddress}}
+{{yourCity}}, {{yourState}} {{yourZipCode}}
+{{yourEmail}}
+{{yourPhoneNumber}}
+{{dateFormat currentDate "MMMM Do, YYYY"}}
+
+{{hiringPartyName}}
+{{hiringPartyStreetAddress}}
+{{hiringPartyCity}}, {{hiringPartyState}} {{hiringPartyZipCode}}
+
+**RE: Formal Demand for Payment Under NYC Freelance Isn't Free Act - Services Rendered {{dateFormat conclusionDate "MMMM Do, YYYY"}}**
+
+Dear {{hiringPartyContactName}},
+
+This letter serves as formal notice pursuant to New York City's Freelance Isn't Free Act (Local Law No. 140 of 2016) regarding outstanding payment for services rendered between {{dateFormat startDate "MMMM Do, YYYY"}} and {{dateFormat conclusionDate "MMMM Do, YYYY"}}.
+
+**Services Provided:**
+{{#each servicesPerformed}}
+- {{this}}
+{{/each}}
+
+**Payment Terms:**
+- Agreed Compensation: {{formatCurrency agreedAmount}}
+- Payment Due Date: {{dateFormat paymentDueDate "MMMM Do, YYYY"}}
+- Days Overdue: {{daysOverdue}} days
+- Current Balance Owing: {{formatCurrency balanceDue}}
+
+**Legal Notice:**
+Under NYC Admin Code § 20-929, you are hereby notified that:
+1. Failure to pay within 30 days of this demand exposes your organization to:
+   - Double damages ({{formatCurrency (multiply balanceDue 2)}})
+   - Statutory attorneys' fees
+   - Civil penalties up to $25,000
+
+**Required Action:**
+Remit {{formatCurrency balanceDue}} by {{dateFormat paymentDueDate "MMMM Do, YYYY"}} to:
+{{paymentInstructions}}
+
+{{#if additionalTerms}}
+**Special Terms:**
+{{additionalTerms}}
+{{/if}}
+
+**Freelancer Rights Assertion:**
+- Right to written contract ({{#if contractExists}}Executed {{dateFormat contractDate "MMMM Do, YYYY"}}{{else}}No contract provided{{/if}})
+- Right to timely payment
+- Right to non-retaliation
+
+Failure to comply will result in:
+1. DCA complaint filing on {{dateFormat (addDays currentDate 14) "MMMM Do, YYYY"}}
+2. Civil action in New York County
+3. Pursuit of all statutory remedies
+
+Sincerely,
+
+{{yourName}}
+
+**Attachments:**
+- {{contractDocumentName}}
+- Invoice {{invoiceNumber}}
+- {{emailThreadReference}}
+
+{{#if ccRecipient}}
+CC: {{ccRecipient}}
+{{/if}}
+
+{{! HANDLEBARS HELPERS NEEDED:
+dateFormat - Format dates
+formatCurrency - Format money
+multiply - For double damages
+addDays - Calculate deadlines
+}}
