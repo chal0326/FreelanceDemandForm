@@ -1,7 +1,7 @@
 import { MantineProvider } from '@mantine/core';
 import DemandLetterForm from './components/DemandLetterForm';
 import { FormData } from './types';
-import { Text } from '@mantine/core';
+import { FooterSimple } from './components/FooterSimple';
 
 function App() {
   const handleFormSubmit = (data: FormData) => {
@@ -15,11 +15,7 @@ function App() {
         <h1>NYC Freelance Isn't Free Act - Demand Letter Generator</h1>
         <DemandLetterForm onSubmit={handleFormSubmit} />
       </div>
-      <div style={{ textAlign: 'center', padding: '20px', backgroundColor: '#f1f1f1' }}>
-          <Text size="sm" color="dimmed" component="p">
-            © {new Date().getFullYear()} Cody L. Hall. All rights reserved.
-          </Text>
-        </div>
+     <FooterSimple />
     </MantineProvider>
   );
 }
